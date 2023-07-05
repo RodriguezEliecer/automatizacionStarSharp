@@ -14,7 +14,7 @@ public class PaginaStarSharp extends PageObject {
     public static final Target TXT_LOGINCLAVE = Target.the("TXTLOGINCLAVE").located(By.id("LoginPanel0_Password"));
     public static final Target BTN_INICIARSESION = Target.the("BTNINICIARSESION").located(By.id("LoginPanel0_LoginButton"));
     public static final Target BTN_ORGANIZACION = Target.the("BTN_ORGANIZACION").located(By.xpath("//ul[@id='nav_menu1_3']//a[@href='#nav_menu1_3_1']"));
-    public static final Target BTN_UNIDADDENEGOCIO = Target.the("BTN_UNIDADDENEGOCIO").located(By.xpath("//ul[@id='nav_menu1_3_1']//child::a"));//ejemplo
+    public static final Target BTN_UNIDADDENEGOCIO = Target.the("BTN_UNIDADDENEGOCIO").located(By.xpath("//ul[@id='nav_menu1_3_1']/li/a[@href='/Organization/BusinessUnit']"));//ejemplo
     public static final Target BTN_NUEVAUNIDADNEGOCIO = Target.the("BTN_NUEVAUNIDADNEGOCIO").located(By.xpath("//div[@class='buttons-inner']//div[@data-action='add']"));
     public static final Target TXT_NUEVAUNIDANEGOCIO = Target.the("TXT_NUEVAUNIDADNEGOCIO").located(By.name("Name"));
     public static final Target BTN_UNIDAD = Target.the("BTN_UNIDAD").located((By.id("s2id_Serenity_Pro_Organization_BusinessUnitDialog3_ParentUnitId")));

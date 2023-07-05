@@ -24,8 +24,6 @@ public class Verificacion implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         boolean result;
-        System.out.println("Label "+Text.of(LABEL_REUNIONCREADA).viewedBy(actor).asString());
-        System.out.println("nombrereunion "+nombreReunion.get(0).getNombreReunion());
         result=Text.of(LABEL_REUNIONCREADA).viewedBy(actor).asString().equals(nombreReunion.get(0).getNombreReunion());
         return result;
     }
