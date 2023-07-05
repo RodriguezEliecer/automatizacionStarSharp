@@ -25,7 +25,8 @@ public class CrearUnidadNegocio implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(BTN_NUEVAUNIDADNEGOCIO));
         actor.attemptsTo(Enter.theValue(datos.get(0).getUnidadReunion()).into(TXT_NUEVAUNIDANEGOCIO));
-        actor.attemptsTo(Click.on(BTN_UNIDAD));
+        actor.attemptsTo(Click.on(BTN_UNIDADPARIENTE));
+        actor.attemptsTo(Enter.theValue(datos.get(0).getUnidadReunion()).into(TXT_UNIDADPARIENTE));
         actor.attemptsTo(Click.on(SELECT_UNIDADPARIENTE));
         actor.attemptsTo(Click.on(BTN_GUARDARUNIDAD));
     }

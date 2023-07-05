@@ -17,8 +17,10 @@ public class PaginaStarSharp extends PageObject {
     public static final Target BTN_UNIDADDENEGOCIO = Target.the("BTN_UNIDADDENEGOCIO").located(By.xpath("//ul[@id='nav_menu1_3_1']/li/a[@href='/Organization/BusinessUnit']"));//ejemplo
     public static final Target BTN_NUEVAUNIDADNEGOCIO = Target.the("BTN_NUEVAUNIDADNEGOCIO").located(By.xpath("//div[@class='buttons-inner']//div[@data-action='add']"));
     public static final Target TXT_NUEVAUNIDANEGOCIO = Target.the("TXT_NUEVAUNIDADNEGOCIO").located(By.name("Name"));
-    public static final Target BTN_UNIDAD = Target.the("BTN_UNIDAD").located((By.id("s2id_Serenity_Pro_Organization_BusinessUnitDialog3_ParentUnitId")));
-    public static final Target SELECT_UNIDADPARIENTE = Target.the("SELECT_UNIDADPARIENTE").located(By.xpath(String.format("//div[@role='option' and text()='%s']", "Technology » Design")));
+    public static final Target BTN_UNIDADPARIENTE = Target.the("BTN_UNIDAD").located((By.id("s2id_Serenity_Pro_Organization_BusinessUnitDialog3_ParentUnitId")));
+    public static final Target TXT_UNIDADPARIENTE = Target.the("TXT_UNIDADPARIENTE").located(By.id("s2id_autogen1_search"));
+    public static final Target SELECT_UNIDADPARIENTE = Target.the("SELECT_UNIDADPARIENTE").located(By.xpath(String.format("//ul[@id='select2-results-1']/li[1]")));
+
     public static final Target BTN_GUARDARUNIDAD = Target.the("BTN_GUARDARUNIDAD").located(By.xpath("//div[@class='buttons-inner']//div[@data-action='save-and-close']"));
     public static final Target BTN_MENUREUNION = Target.the("BTN_MENUREUNION").located(By.xpath("//ul[@id='nav_menu1_3']//a[@href='#nav_menu1_3_2']"));
     public static final Target BTN_SUBMENUREUNION = Target.the("BTN_SUBMENUREUNION").located(By.xpath("//ul[@id='nav_menu1_3_2']//a[@href='/Meeting/Meeting']"));
