@@ -29,12 +29,14 @@ public class Mydefinition {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 AbrirPagina.urlStarSharp()
         );
+        System.out.println("Paso 1");
     }
 
 
     @Cuando("^realizo la autenticación con las credenciales$")
     public void realizoLaAutenticaciónConLasCredenciales(List<ReunionModel> datosReunion) {
         OnStage.theActorInTheSpotlight().attemptsTo(IniciarSesion.credenciales(datosReunion));
+        System.out.println("Paso 2");
     }
 
     
@@ -42,30 +44,36 @@ public class Mydefinition {
     @Y("^accedo al menú ORGANIZACION-UNIDADES DE NEGOCIO$")
     public void accedoAlMenúORGANIZACIONUNIDADESDENEGOCIO() {
         OnStage.theActorInTheSpotlight().attemptsTo(IngresarUnidadNegocio.seleccionarmenu());
+        System.out.println("Paso 3");
     }
 
     @Y("^creo una nueva Unidad de Negocio$")
     public void creoUnaNuevaUnidadDeNegocio(List<ReunionModel>datos) {
         OnStage.theActorInTheSpotlight().attemptsTo(CrearUnidadNegocio.registarnuevaunidad(datos));
+        System.out.println("Paso 4");
     }
 
     @Y("^accedo al menú REUNION>REUNIONES$")
     public void accedoAlMenúREUNIONREUNIONES() {
         OnStage.theActorInTheSpotlight().attemptsTo(IngresarModuloReunion.seleccionarreunion());
+        System.out.println("Paso 5");
     }
 
     @Y("^programo una nueva reunión seleccionando la Unidad de Negocio recién creada$")
     public void programoUnaNuevaReuniónSeleccionandoLaUnidadDeNegocioReciénCreada() {
         OnStage.theActorInTheSpotlight().attemptsTo(NuevaReunion.crearnuevareunion());
+        System.out.println("Paso 6");
     }
 
     @Y("^diligencio todos los campos del formulario de la reunión$")
     public void diligencioTodosLosCamposDelFormularioDeLaReunión(List<ReunionModel>datos) {
         OnStage.theActorInTheSpotlight().attemptsTo(DiligenciarFormularioReunion.registrarreunion(datos));
+        System.out.println("Paso 7");
     }
 
     @Entonces("^verifico que la reunión se haya creado satisfactoriamente$")
     public void verificoQueLaReuniónSeHayaCreadoSatisfactoriamente(List<ReunionModel>datos) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Verificacion.verificarreunion(datos)));
+        System.out.println("Paso 8");
     }
 }
