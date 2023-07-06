@@ -13,8 +13,8 @@
         | <loginUsuario> | <loginClave> |
       Y accedo al menú ORGANIZACION-UNIDADES DE NEGOCIO
       Y creo una nueva Unidad de Negocio
-        | unidadReunion   |
-        | <unidadReunion> |
+        | unidadReunion   | nombreUnidadPariente   |
+        | <unidadReunion> | <nombreUnidadPariente> |
       Y accedo al menú REUNION>REUNIONES
       Y programo una nueva reunión seleccionando la Unidad de Negocio recién creada
       Y diligencio todos los campos del formulario de la reunión
@@ -24,5 +24,5 @@
         | nombreReunion   |
         | <nombreReunion> |
       Ejemplos:
-        | loginUsuario | loginClave | unidadReunion | nombreReunion     | tipoReunion | numeroReunion | fechaInicio | horaInicio | fechaFinalizacion | horaFinalizacion | ubicacionReunion | organizadorReunion | reporteroReunion |
-        | admin        | serenity   | TestQA        | Reunión QA PRUEBA | Strategy    | WDM-104       | 07/05/2023  | 02:10      | 07/05/2023        | 12:00            | On Site          | Dylan Smith        | Isabella Lewis   |
+        | loginUsuario | loginClave | unidadReunion | nombreReunion     | nombreUnidadPariente | tipoReunion | numeroReunion | fechaInicio | horaInicio | fechaFinalizacion | horaFinalizacion | ubicacionReunion | organizadorReunion | reporteroReunion |
+        | admin        | serenity   | TestQA        | Reunión QA PRUEBA | Technology » Test    | Strategy    | WDM-104       | 07/05/2023  | 02:10      | 07/05/2023        | 12:00            | On Site          | Dylan Smith        | Isabella Lewis   |

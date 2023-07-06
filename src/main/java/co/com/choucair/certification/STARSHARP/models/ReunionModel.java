@@ -13,6 +13,8 @@ public class ReunionModel {
     private String fechaFinalizacion;
     private String horaFinalizacion;
     private String unidadReunion;
+
+    private String nombreUnidadPariente;
     private String reporteroReunion;
 
     public String getLoginUsuario() {
@@ -119,4 +121,11 @@ public class ReunionModel {
     }
 
 
+    public String getNombreUnidadPariente() {
+        return nombreUnidadPariente;
+    }
+
+    public void setNombreUnidadPariente(String nombreUnidadPariente) {
+        this.nombreUnidadPariente = nombreUnidadPariente;
+    }
 }
