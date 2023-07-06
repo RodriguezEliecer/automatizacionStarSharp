@@ -16,20 +16,19 @@ public class PaginaStarSharp extends PageObject {
     public static final Target BTN_ORGANIZACION = Target.the("BTN_ORGANIZACION").located(By.xpath("//ul[@id='nav_menu1_3']//a[@href='#nav_menu1_3_1']"));
     public static final Target BTN_UNIDADDENEGOCIO = Target.the("BTN_UNIDADDENEGOCIO").located(By.xpath("//ul[@id='nav_menu1_3_1']/li/a[@href='/Organization/BusinessUnit']"));//ejemplo
     public static final Target BTN_NUEVAUNIDADNEGOCIO = Target.the("BTN_NUEVAUNIDADNEGOCIO").located(By.xpath("//div[@class='buttons-inner']//div[@data-action='add']"));
-    public static final Target TXT_NUEVAUNIDANEGOCIO = Target.the("TXT_NUEVAUNIDADNEGOCIO").located(By.name("Name"));
+    public static final Target TXT_NUEVAUNIDANEGOCIO = Target.the("TXT_NUEVAUNIDADNEGOCIO").located(By.id("Serenity_Pro_Organization_BusinessUnitDialog3_Name"));
     public static final Target BTN_UNIDADPARIENTE = Target.the("BTN_UNIDAD").located((By.id("s2id_Serenity_Pro_Organization_BusinessUnitDialog3_ParentUnitId")));
     public static final Target TXT_UNIDADPARIENTE = Target.the("TXT_UNIDADPARIENTE").located(By.id("s2id_autogen1_search"));
     public static final Target SELECT_UNIDADPARIENTE = Target.the("SELECT_UNIDADPARIENTE").located(By.xpath("//ul[@id='select2-results-1']/li[1]"));
-
     public static final Target BTN_GUARDARUNIDAD = Target.the("BTN_GUARDARUNIDAD").located(By.xpath("//div[@class='buttons-inner']//div[@data-action='save-and-close']"));
     public static final Target BTN_MENUREUNION = Target.the("BTN_MENUREUNION").located(By.xpath("//ul[@id='nav_menu1_3']//a[@href='#nav_menu1_3_2']"));
     public static final Target BTN_SUBMENUREUNION = Target.the("BTN_SUBMENUREUNION").located(By.xpath("//ul[@id='nav_menu1_3_2']//a[@href='/Meeting/Meeting']"));
     public static final Target BTN_NUEVAREUNION = Target.the("BTN_NUEVAREUNION").located(By.xpath("//div[@class='buttons-inner']//div[@data-action='add']"));
     public static final Target TXT_NOMBREREUNION = Target.the("TXT_NOMBREREUNION").located(By.id("Serenity_Pro_Meeting_MeetingDialog10_MeetingName"));
     public static final Target TXT_NUMEROREUNION = Target.the("TXT_NUMEROREUNION").located(By.id("Serenity_Pro_Meeting_MeetingDialog10_MeetingNumber"));
-    public static final Target BTN_TIPOREUNION = Target.the("TXT_NUMEROREUNION").located(By.xpath("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_MeetingTypeId']"));
-    public static final Target TXT_BUSCARTIPOREUNION = Target.the("TXT_NUMEROREUNION").located(By.id("s2id_autogen6_search"));
-    public static final Target SELECT_TIPOREUNION = Target.the("TXT_NUMEROREUNION").located(By.xpath("//div[@id='select2-drop']//ul[@id='select2-results-6']/child::li[1]"));
+    public static final Target BTN_TIPOREUNION = Target.the("BTN_TIPOREUNION").located(By.xpath("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_MeetingTypeId']"));
+    public static final Target TXT_BUSCARTIPOREUNION = Target.the("TXT_BUSCARTIPOREUNION").located(By.id("s2id_autogen6_search"));
+    public static final Target SELECT_TIPOREUNION = Target.the("SELECT_TIPOREUNION").located(By.xpath("//div[@id='select2-drop']//ul[@id='select2-results-6']/child::li[1]"));
     public static final Target TXT_FECHAINICIOREUNION = Target.the("TXT_FECHAINICIOREUNION").located(By.id("Serenity_Pro_Meeting_MeetingDialog10_StartDate"));
     public static final Target SELECT_HORAINICIOREUNION = Target.the("SELECT_HORAINICIOREUNION").located(By.xpath("//div[@class='field StartDate col-sm-6']//option[@value='03:35'][1]"));
     public static final Target TXT_FECHAFINREUNION = Target.the("TXT_FECHAFINREUNION").located(By.id("Serenity_Pro_Meeting_MeetingDialog10_EndDate"));
