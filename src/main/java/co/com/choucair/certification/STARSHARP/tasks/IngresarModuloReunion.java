@@ -14,7 +14,7 @@ public class IngresarModuloReunion implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(BTN_MENUREUNION));
+        //actor.attemptsTo(Click.on(BTN_MENUREUNION));
         actor.attemptsTo(Click.on(BTN_SUBMENUREUNION));
     }
 }

@@ -25,4 +25,4 @@
         | <nombreReunion> |
       Ejemplos:
         | loginUsuario | loginClave | unidadReunion | nombreReunion     | nombreUnidadPariente | tipoReunion | numeroReunion | fechaInicio | horaInicio | fechaFinalizacion | horaFinalizacion | ubicacionReunion | organizadorReunion | reporteroReunion |
-        | admin        | serenity   | TestQA        | Reunión QA PRUEBA | Technology » Test    | Strategy    | WDM-104       | 07/05/2023  | 02:10      | 07/05/2023        | 12:00            | On Site          | Dylan Smith        | Isabella Lewis   |
+        | admin        | serenity   | TestQA        | Reunión QA PRUEBA | Technology » Test    | Strategy    | WDM-104       | 07/10/2026  | 02:10      | 31/10/2023        | 12:00            | On Site          | Dylan Smith        | Isabella Lewis   |

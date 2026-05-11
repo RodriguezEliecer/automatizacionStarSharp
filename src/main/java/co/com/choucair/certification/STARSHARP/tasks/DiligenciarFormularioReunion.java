@@ -6,14 +6,12 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-
+import org.openqa.selenium.Keys;
 import java.util.List;
-
 import static co.com.choucair.certification.STARSHARP.userinterface.PaginaStarSharp.*;
 
 public class DiligenciarFormularioReunion implements Task {
     private List<ReunionModel> datosReunion;
-
     public DiligenciarFormularioReunion(List<ReunionModel> datosReunion) {
         super();
         this.datosReunion = datosReunion;
@@ -24,17 +22,20 @@ public class DiligenciarFormularioReunion implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
         actor.attemptsTo(Enter.theValue(datosReunion.get(0).getNombreReunion()).into(TXT_NOMBREREUNION));
         actor.attemptsTo(Enter.theValue(datosReunion.get(0).getNumeroReunion()).into(TXT_NUMEROREUNION));
         actor.attemptsTo(
-                Click.on(BTN_TIPOREUNION),
-                Enter.theValue(datosReunion.get(0).getTipoReunion()).into(TXT_BUSCARTIPOREUNION),
-                Click.on(SELECT_TIPOREUNION)
+                Click.on(TXT_FECHAINICIOREUNION),
+                Enter.theValue(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE)).into(TXT_FECHAINICIOREUNION),
+                Enter.theValue(datosReunion.get(0).getFechaInicio()).into(TXT_FECHAINICIOREUNION).thenHit(Keys.TAB) // Prueba con TAB en lugar de ENTER
         );
-        actor.attemptsTo(Enter.theValue(datosReunion.get(0).getFechaInicio()).into(TXT_FECHAINICIOREUNION));
-        actor.attemptsTo(Click.on(SELECT_HORAINICIOREUNION));
-        actor.attemptsTo(Enter.theValue(datosReunion.get(0).getFechaFinalizacion()).into(TXT_FECHAFINREUNION));
-        actor.attemptsTo(Click.on(SELECT_HORAFINREUNION));
+        System.out.println("pase po aqui 0");
+        actor.attemptsTo(
+                Click.on(TXT_FECHAFINREUNION),
+                Enter.theValue(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE)).into(TXT_FECHAFINREUNION),
+                Enter.theValue(datosReunion.get(0).getFechaInicio()).into(TXT_FECHAFINREUNION).thenHit(Keys.TAB) // Prueba con TAB en lugar de ENTER
+        );
         actor.attemptsTo(
                 Click.on(BTN_LOCALIZACION),
                 Enter.theValue(datosReunion.get(0).getUbicacionReunion()).into(TXT_LOCALIZACION),
@@ -55,7 +56,7 @@ public class DiligenciarFormularioReunion implements Task {
                 Enter.theValue(datosReunion.get(0).getReporteroReunion()).into(TXT_REPORTERO),
                 Click.on(SELECT_REPORTERO)
         );
-        actor.attemptsTo(
+       actor.attemptsTo(
                 Click.on(BTN_ASISTENTES),
                 Click.on(SELECT_ASISTENTES),
                 Click.on(BTN_GUARDARREUNION)
